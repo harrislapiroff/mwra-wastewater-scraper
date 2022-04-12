@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "wastewater"
+version = "0.1.0"
+description = ""
+authors = ["Harris Lapiroff <harris@freedom.press>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.27.1"
+beautifulsoup4 = "^4.10.0"
+tabula-py = "^2.3.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+ipdb = "^0.13.9"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
