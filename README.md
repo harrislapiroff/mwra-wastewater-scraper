@@ -4,6 +4,8 @@ Scrapes latest data from the [MWRA Wastewater COVID-19 Tracking page](https://ww
 
 ## Usage
 
+You must have a [Java Runtime](https://java.com/en/download/manual.jsp) installed to use.
+
 ```sh
 poetry install
 poetry run python -m wastewater
