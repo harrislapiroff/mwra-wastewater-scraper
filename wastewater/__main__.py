@@ -1,3 +1,5 @@
+from shutil import copyfile
+
 import requests
 import tabula
 from bs4 import BeautifulSoup
@@ -12,6 +14,8 @@ def main():
     pdf_url = base_url + link
 
     df = tabula.io.convert_into(pdf_url, pages='all', lattice=True, output_path=f'output/mwra-data-{date_string}.csv', output_format='csv')
+
+    copyfile(f'output/mwra-data-{date_string}.csv', 'output/latest.csv')
 
 if __name__ == '__main__':
     main()
