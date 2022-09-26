@@ -8,5 +8,5 @@ You must have a [Java Runtime](https://java.com/en/download/manual.jsp) installe
 
 ```sh
 poetry install
-poetry run python -m wastewater
+poetry run build
 ```

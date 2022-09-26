@@ -4,6 +4,9 @@ version = "0.1.0"
 description = ""
 authors = ["Harris Lapiroff <harris@freedom.press>"]
 
+[tool.poetry.scripts]
+build = "wastewater.__main__:main"
+
 [tool.poetry.dependencies]
 python = "^3.9"
 requests = "^2.27.1"
