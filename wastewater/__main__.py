@@ -9,8 +9,8 @@ def main():
     base_url = "/".join(res.url.split("/")[:-1]) + '/'
 
     soup = BeautifulSoup(res.text, 'html.parser')
-    link = soup.select('a[href^="MWRAData"][href$="-data.pdf"]')[0].attrs['href']
-    date_string = link[8:-9]
+    link = soup.select('a[href^="2022/MWRAData"][href$="-data.pdf"]')[0].attrs['href']
+    date_string = link[13:-9]
     pdf_url = base_url + link
 
     df = tabula.io.convert_into(pdf_url, pages='all', lattice=True, output_path=f'output/mwra-data-{date_string}.csv', output_format='csv')
