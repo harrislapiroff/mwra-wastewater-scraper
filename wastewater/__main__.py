@@ -4,12 +4,12 @@ import requests
 import tabula
 from bs4 import BeautifulSoup
 
-LINK_PREFIX = 'MWRAData'
-LINK_SUFFIX = '-data.pdf'
+LINK_PREFIX = '/media/file/mwradata'
+LINK_SUFFIX = '-data'
 
 def main():
     res = requests.get('https://www.mwra.com/biobot/biobotdata.htm')
-    base_url = "/".join(res.url.split("/")[:-1]) + '/'
+    base_url = "/".join(res.url.split("/")[:-2])
 
     soup = BeautifulSoup(res.text, 'html.parser')
     link = soup.select(f'a[href^="{LINK_PREFIX}"][href$="{LINK_SUFFIX}"]')[0].attrs['href']
